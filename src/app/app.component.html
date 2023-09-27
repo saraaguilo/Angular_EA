@@ -317,26 +317,16 @@
   {{title}}
 </h1>
 
-<router-outlet></router-outlet>
-
+<!-- Muestra los distintos componentes (heroes, dashboard, hero-detail) en el fichero AppComponent-->
 <nav>
   <a routerLink="/dashboard"> Dashboard </a>
 </nav>
 <nav>
   <a routerLink="/heroes"> Heroes </a>
 </nav>
-
+<router-outlet></router-outlet>
 <app-messages></app-messages>
 
 
 </div>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<router-outlet></router-outlet>

@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.getHeroes();
   }
-
+  // Como en el heroes.component, obtiene los 'heroes' mediante HeroService y utiliza un slice para obtener los 'Top Heroes'
   getHeroes(): void {
     this.heroService.getHeroes()
       .subscribe(heroes => this.heroes = heroes.slice(1, 5));

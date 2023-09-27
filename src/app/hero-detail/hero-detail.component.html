@@ -1,9 +1,12 @@
+<!--Muestra detalles del 'hero' seleccionado con *ngIf-->
 <div *ngIf="hero">
     <h2>{{hero.name | uppercase}} Details</h2>
     <div><span>id: </span>{{hero.id}}</div>
+    <!-- Permite editar el nombre del hero mediante Two-Way Binding-->
     <div>
       <label for="hero-name">Hero name: </label>
       <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
     </div>
+    <!--------------------------------------------------------------->
     <button type="button" (click)="goBack()">go back</button>
   </div>
