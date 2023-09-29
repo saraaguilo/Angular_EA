@@ -22,4 +22,9 @@ export class HeroesComponent implements OnInit {
     this.heroService.getHeroes()
     .subscribe(heroes => this.heroes = heroes);
   }
+  //
+  addHero(): void {
+    let h:Hero = {"id":11, "name":"XXXXX"}
+    this.heroes.push(h);
+  }
 }

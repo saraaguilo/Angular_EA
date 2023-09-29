@@ -1,10 +1,12 @@
 
 <h2>My Heroes</h2>
+FORM
+<button type="button" (click)="addHero()">go back</button>
 <ul class="heroes">
   <!-- Muestra la lista de 'heroes' -->  
   <li *ngFor="let hero of heroes">
       <a routerLink="/detail/{{hero.id}}">
-        <span class="badge">{{hero.id}}</span> {{hero.name}}
+        <span class="badge">{{hero.id}}</span> {{hero.name|slice:0:10}}
       </a>
     </li>
   </ul>
