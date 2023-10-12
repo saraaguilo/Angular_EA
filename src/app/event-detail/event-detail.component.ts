@@ -3,31 +3,31 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
+import { Event } from '../event';
+import { EventService } from '../event.service';
 
 @Component({
-  selector: 'app-hero-detail',
-  templateUrl: './hero-detail.component.html',
-  styleUrls: [ './hero-detail.component.css' ]
+  selector: 'app-event-detail',
+  templateUrl: './event-detail.component.html',
+  styleUrls: [ './event-detail.component.css' ]
 })
-export class HeroDetailComponent implements OnInit {
-  hero: Hero | undefined;
+export class EventDetailComponent implements OnInit {
+  event: Event | undefined;
 
   constructor(
     private route: ActivatedRoute,
-    private heroService: HeroService,
+    private eventService: EventService,
     private location: Location
   ) {}
 
   ngOnInit(): void {
-    this.getHero();
+    this.getEvent();
   }
   // Función que obtiene los detalles del hero que ha sido especificado por el usuario
-  getHero(): void {
+  getEvent(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.heroService.getHero(id)
-      .subscribe(hero => this.hero = hero);
+    this.eventService.getEvent(id)
+      .subscribe(event => this.event = event);
   }
 
   goBack(): void {
@@ -35,8 +35,8 @@ export class HeroDetailComponent implements OnInit {
   }
 
   save(): void {
-    if (this.hero) {
-      this.heroService.updateHero(this.hero)
+    if (this.event) {
+      this.eventService.updateEvent(this.event)
         .subscribe(() => this.goBack());
     }
   }

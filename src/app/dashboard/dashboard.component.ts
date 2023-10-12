@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
+import { Event } from '../event';
+import { EventService } from '../event.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,16 +8,16 @@ import { HeroService } from '../hero.service';
   styleUrls: [ './dashboard.component.css' ]
 })
 export class DashboardComponent implements OnInit {
-  heroes: Hero[] = [];
+  events: Event[] = [];
 
-  constructor(private heroService: HeroService) { }
+  constructor(private eventService: EventService) { }
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.getEvents();
   }
   // Como en el heroes.component, obtiene los 'heroes' mediante HeroService y utiliza un slice para obtener los 'Top Heroes'
-  getHeroes(): void {
-    this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes.slice(1, 5));
+  getEvents(): void {
+    this.eventService.getEvents()
+      .subscribe(events => this.events = events.slice(1, 5));
   }
 }
