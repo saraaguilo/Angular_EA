@@ -1,7 +1,7 @@
 <!--Muestra detalles del 'event' seleccionado con *ngIf-->
 <div *ngIf="event">
     <h2>{{event.eventName | uppercase}} Details</h2>
-    <div><span>id: </span>{{event.id}}</div>
+    <div><span>id: </span>{{event._id}}</div>
     <!-- Permite editar el nombre del event mediante Two-Way Binding-->
     <div>
       <label for="event-name">Event name: </label>

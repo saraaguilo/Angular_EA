@@ -25,7 +25,7 @@ export class EventDetailComponent implements OnInit {
   // Función que obtiene los detalles del event que ha sido especificado por el usuario
   getEvent(): void {
     const id = String(this.route.snapshot.paramMap.get('id'));
-    console.log(id);
+    console.log("id",id);
     this.eventService.getEvent(id)
       .subscribe(event => this.event = event);
   }

@@ -25,7 +25,8 @@ export class UserDetailComponent implements OnInit {
   }
   // Función que obtiene los detalles del user que ha sido especificado por el usuario
   getUser(): void {
-    const id = String(this.route.snapshot.paramMap.get('_id'));
+    const id = String(this.route.snapshot.paramMap.get('id'));
+    console.log("id", id);
     this.userService.getUser(id)
       .subscribe(user => this.user = user);
   }

@@ -31,7 +31,7 @@ export class EventsComponent implements OnInit {
   }
   delete(event: Event): void {
     this.events = this.events.filter(h => h !== event);
-    this.eventService.deleteEvent(event.id).subscribe();
+    this.eventService.deleteEvent(event._id).subscribe();
   }
 
   

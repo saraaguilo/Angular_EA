@@ -13,7 +13,7 @@
 
 <ul class="events">
   <li *ngFor="let event of events">
-    <a routerLink="detailEvent/{{event.id}}">
+    <a routerLink="/detailEvent/{{event._id}}">
       <span class="badge">{{event.eventName}}</span> 
     </a>
     <button type="button" class="delete" title="delete event"

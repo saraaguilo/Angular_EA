@@ -12,5 +12,5 @@ export interface Event {
     photo: string;
     idChat: string;
     idComments: string[];
-    id: string;
+    _id: string;
 }

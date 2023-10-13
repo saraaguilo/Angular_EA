@@ -14,7 +14,7 @@
 
 <ul class="users">
   <li *ngFor="let user of users">
-    <a routerLink="detailUser/{{user._id}}">
+    <a routerLink="/detailUser/{{user._id}}">
       <span class="badge">{{user.userName}}</span> 
     </a>
     <button type="button" class="delete" title="delete user"

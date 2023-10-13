@@ -5,7 +5,7 @@
     <ul class="search-result">
 <!--The $ is a convention that indicates heroes$ is an Observable, not an array.-->
       <li *ngFor="let event of events$ | async" >
-        <a routerLink="/detail/{{event.id}}">
+        <a routerLink="/detail/{{event._id}}">
           {{event.eventName}}
         </a>
       </li>
