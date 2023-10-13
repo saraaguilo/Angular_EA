@@ -5,24 +5,29 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { EventSearchComponent } from './event-search/event-search.component';
+import { UserSearchComponent } from './user-search/user-search.component';
 import { EventsComponent } from './events/events.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    
     EventDetailComponent,
+    UserDetailComponent,
     MessagesComponent,
     DashboardComponent,
     EventSearchComponent,
-    EventsComponent
-  ],
+    UserSearchComponent,
+    EventsComponent,
+    UsersComponent
+],
   imports: [
     BrowserModule,
     AppRoutingModule,

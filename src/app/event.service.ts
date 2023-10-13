@@ -80,7 +80,7 @@ private handleError<T>(operation = 'operation', result?: T) {
     );
   }
 
-  /** POST: add a new hero to the server */
+  /** POST: add a new event to the server */
   addEvent(event: Event): Observable<Event> {
     return this.http.post<Event>(this.eventsUrl, event, this.httpOptions).pipe(
       tap((newEvent: Event) => this.log(`added event w/ id=${newEvent.id}`)),
@@ -88,7 +88,7 @@ private handleError<T>(operation = 'operation', result?: T) {
     );
   }
 
-  /** DELETE: delete the hero from the server */
+  /** DELETE: delete the event from the server */
   deleteEvent(id: number): Observable<Event> {
     const url = `${this.eventsUrl}/${id}`;
 

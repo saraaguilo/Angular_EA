@@ -1,6 +1,16 @@
 //Interfaz de 'Event'
 
 export interface Event {
-    id: number;
-    name: string;
+    coordinates: [number, number];
+    eventName: string;
+    idCategory: string[];
+    date: Date;
+    idUser: string;
+    description: string;
+    assistants: string[];
+    link: string; //not required
+    photo: string;
+    idChat: string;
+    idComments: string[];
+    id: string;
 }
