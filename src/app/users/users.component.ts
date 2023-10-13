@@ -18,20 +18,20 @@ export class UsersComponent implements OnInit {
   }
   // Obtiene los 'heroes' proporcionados por el HeroService que a la vez le llegan del fichero de mock heroes
   getUsers(): void {
-    this.userService.getEvents()
+    this.userService.getUsers()
     .subscribe(users => this.users = users);
   }
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.userService.addEvent({ name } as User)
+  add(userName: string): void {
+    userName = userName.trim();
+    if (!userName) { return; }
+    this.userService.addUser({ userName } as User)
       .subscribe(user => {
         this.users.push(user);
       });
   }
-  delete(user: Event): void {
+  delete(user: User): void {
     this.users = this.users.filter(h => h !== user);
-    this.userService.deleteUser(user.id).subscribe();
+    this.userService.deleteUser(user._id).subscribe();
   }
 
   

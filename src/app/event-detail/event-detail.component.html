@@ -1,11 +1,11 @@
 <!--Muestra detalles del 'event' seleccionado con *ngIf-->
 <div *ngIf="event">
-    <h2>{{event.name | uppercase}} Details</h2>
+    <h2>{{event.eventName | uppercase}} Details</h2>
     <div><span>id: </span>{{event.id}}</div>
     <!-- Permite editar el nombre del event mediante Two-Way Binding-->
     <div>
       <label for="event-name">Event name: </label>
-      <input id="event-name" [(ngModel)]="event.name" placeholder="Event name"/>
+      <input id="event-name" [(ngModel)]="event.eventName" placeholder="Event name"/>
     </div>
     <!--------------------------------------------------------------->
     <button type="button" (click)="goBack()">go back</button>

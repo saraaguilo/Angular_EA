@@ -2,7 +2,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-
 import { Event } from '../event';
 import { EventService } from '../event.service';
 
@@ -23,9 +22,10 @@ export class EventDetailComponent implements OnInit {
   ngOnInit(): void {
     this.getEvent();
   }
-  // Función que obtiene los detalles del hero que ha sido especificado por el usuario
+  // Función que obtiene los detalles del event que ha sido especificado por el usuario
   getEvent(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const id = String(this.route.snapshot.paramMap.get('id'));
+    console.log(id);
     this.eventService.getEvent(id)
       .subscribe(event => this.event = event);
   }

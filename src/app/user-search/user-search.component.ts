@@ -14,7 +14,7 @@ import { UserService } from '../user.service';
   styleUrls: [ './user-search.component.css' ]
 })
 export class UserSearchComponent implements OnInit {
-  users$!: Observable<Event[]>;
+  users$!: Observable<User[]>;
   private searchTerms = new Subject<string>();
 
   constructor(private userService: UserService) {}

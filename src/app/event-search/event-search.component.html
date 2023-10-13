@@ -6,7 +6,7 @@
 <!--The $ is a convention that indicates heroes$ is an Observable, not an array.-->
       <li *ngFor="let event of events$ | async" >
         <a routerLink="/detail/{{event.id}}">
-          {{event.name}}
+          {{event.eventName}}
         </a>
       </li>
     </ul>

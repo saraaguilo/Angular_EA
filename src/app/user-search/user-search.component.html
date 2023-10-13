@@ -5,8 +5,8 @@
     <ul class="search-result">
 <!--The $ is a convention that indicates heroes$ is an Observable, not an array.-->
       <li *ngFor="let user of users$ | async" >
-        <a routerLink="/detail/{{user.id}}">
-          {{user.name}}
+        <a routerLink="/detail/{{user._id}}">
+          {{user.userName}}
         </a>
       </li>
     </ul>

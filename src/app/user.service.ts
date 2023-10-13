@@ -65,7 +65,7 @@ private handleError<T>(operation = 'operation', result?: T) {
   */
 
   /** GET user by id. Will 404 if id not found */
-  getUser(id: number): Observable<User> {
+  getUser(id: string): Observable<User> {
     const url = `${this.usersUrl}/${id}`;
     return this.http.get<User>(url).pipe(
       tap(_ => this.log(`fetched user id=${id}`)),
@@ -76,7 +76,7 @@ private handleError<T>(operation = 'operation', result?: T) {
   /** PUT: update the hero on the server */
   updateUser(user: User): Observable<any> {
     return this.http.put(this.usersUrl, user, this.httpOptions).pipe(
-      tap(_ => this.log(`updated user id=${user.id}`)),
+      tap(_ => this.log(`updated user id=${user._id}`)),
       catchError(this.handleError<any>('updateUser'))
     );
   }
@@ -84,13 +84,13 @@ private handleError<T>(operation = 'operation', result?: T) {
   /** POST: add a new user to the server */
   addUser(user: User): Observable<User> {
     return this.http.post<User>(this.usersUrl, user, this.httpOptions).pipe(
-      tap((newUser: User) => this.log(`added user w/ id=${newUser.id}`)),
+      tap((newUser: User) => this.log(`added user w/ id=${newUser._id}`)),
       catchError(this.handleError<User>('addUser'))
     );
   }
 
   /** DELETE: delete the user from the server */
-  deleteUser(id: number): Observable<User> {
+  deleteUser(id: string): Observable<User> {
     const url = `${this.usersUrl}/${id}`;
 
     return this.http.delete<User>(url, this.httpOptions).pipe(

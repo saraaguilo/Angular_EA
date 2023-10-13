@@ -21,10 +21,10 @@ export class EventsComponent implements OnInit {
     this.eventService.getEvents()
     .subscribe(events => this.events = events);
   }
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.eventService.addEvent({ name } as Event)
+  add(eventName: string): void {
+    eventName = eventName.trim();
+    if (!eventName) { return; }
+    this.eventService.addEvent({ eventName } as Event)
       .subscribe(event => {
         this.events.push(event);
       });

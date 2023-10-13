@@ -37,9 +37,9 @@ import { UsersComponent } from './users/users.component';
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     //The in-memory-data.service.ts file takes over the function of mock-heroes.ts
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+    //HttpClientInMemoryWebApiModule.forRoot(
+      //InMemoryDataService, { dataEncapsulation: false }
+    //)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -64,7 +64,7 @@ private handleError<T>(operation = 'operation', result?: T) {
   */
 
   /** GET event by id. Will 404 if id not found */
-  getEvent(id: number): Observable<Event> {
+  getEvent(id: string): Observable<Event> {
     const url = `${this.eventsUrl}/${id}`;
     return this.http.get<Event>(url).pipe(
       tap(_ => this.log(`fetched event id=${id}`)),
@@ -89,7 +89,7 @@ private handleError<T>(operation = 'operation', result?: T) {
   }
 
   /** DELETE: delete the event from the server */
-  deleteEvent(id: number): Observable<Event> {
+  deleteEvent(id: string): Observable<Event> {
     const url = `${this.eventsUrl}/${id}`;
 
     return this.http.delete<Event>(url, this.httpOptions).pipe(

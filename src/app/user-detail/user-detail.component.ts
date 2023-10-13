@@ -23,9 +23,9 @@ export class UserDetailComponent implements OnInit {
   ngOnInit(): void {
     this.getUser();
   }
-  // Función que obtiene los detalles del hero que ha sido especificado por el usuario
+  // Función que obtiene los detalles del user que ha sido especificado por el usuario
   getUser(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const id = String(this.route.snapshot.paramMap.get('_id'));
     this.userService.getUser(id)
       .subscribe(user => this.user = user);
   }
@@ -36,7 +36,7 @@ export class UserDetailComponent implements OnInit {
 
   save(): void {
     if (this.user) {
-      this.userService.updateEvent(this.user)
+      this.userService.updateUser(this.user)
         .subscribe(() => this.goBack());
     }
   }
