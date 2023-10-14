@@ -26,7 +26,7 @@
   .users {
     color: #333;
     text-decoration: none;
-    background-color: #EEE;
+    background-color: #ffffff;
     margin: .5em;
     padding: .3em 0;
     height: 1.6em;
@@ -37,7 +37,7 @@
   
   .users a:hover {
     color: #2c3a41;
-    background-color: #e6e6e6;
+    background-color: #ffffff;
   }
   
   .users a:active {
@@ -50,28 +50,35 @@
     font-size: small;
     color: white;
     padding: 0.8em 0.7em 0 0.7em;
-    background-color: #405061;
+    background-color: #4a6b8b;
     line-height: 1em;
-    position: relative;
+    position: center;
     left: -1px;
     top: -4px;
     height: 1.8em;
-    min-width: 16px;
-    text-align: right;
+    min-width: 230px;
+    text-align: center;
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
+    margin: 5px;
   }
   
   .add-button {
    padding: .5rem 1.5rem;
    font-size: 1rem;
    margin-bottom: 2rem;
+   text-align: center;
+   margin-left: 80px;
   }
   
   .add-button:hover {
     color: white;
     background-color: #42545C;
+    text-align: center;
+
+
   }
+  
   
   button.delete {
     position: absolute;
@@ -80,12 +87,15 @@
     background-color: white;
     color:  #525252;
     font-size: 1.1rem;
-    margin: 0;
+    margin: 5px;
     padding: 1px 10px 3px 10px;
+
   }
   
   button.delete:hover {
     background-color: #525252;
     color: white;
   }
+
+ 
     

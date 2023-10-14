@@ -15,6 +15,8 @@ import { EventSearchComponent } from './event-search/event-search.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { EventsComponent } from './events/events.component';
 import { UsersComponent } from './users/users.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,15 @@ import { UsersComponent } from './users/users.component';
     EventSearchComponent,
     UserSearchComponent,
     EventsComponent,
-    UsersComponent
+    UsersComponent,
+    NavbarComponent
 ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
