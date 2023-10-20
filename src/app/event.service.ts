@@ -21,7 +21,7 @@ export class EventService {
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
-  private eventsUrl = 'http://localhost:9090/events/';  // URL to web api
+  private eventsUrl = 'http://localhost:9090/events';  // URL to web api
 
 
   /**
@@ -73,15 +73,16 @@ private handleError<T>(operation = 'operation', result?: T) {
   }
 
   /** PUT: update the hero on the server */
-  updateEvent(event: Event): Observable<any> {
-    return this.http.put(this.eventsUrl, event, this.httpOptions).pipe(
+  updateEvent(event: any): Observable<any> { //any canviat
+    const url = `${this.eventsUrl}/${event._id}`;
+    return this.http.put(url, event, this.httpOptions).pipe(
       tap(_ => this.log(`updated event id=${event._id}`)),
       catchError(this.handleError<any>('updateEvent'))
     );
   }
 
   /** POST: add a new event to the server */
-  addEvent(event: Event): Observable<Event> {
+  addEvent(event: any): Observable<Event> {
     return this.http.post<Event>(this.eventsUrl, event, this.httpOptions).pipe(
       tap((newEvent: Event) => this.log(`added event w/ id=${newEvent._id}`)),
       catchError(this.handleError<Event>('addEvent'))

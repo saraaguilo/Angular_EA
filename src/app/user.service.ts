@@ -75,6 +75,7 @@ private handleError<T>(operation = 'operation', result?: T) {
 
   /** PUT: update the hero on the server */
   updateUser(user: User): Observable<any> {
+    
     return this.http.put(this.usersUrl, user, this.httpOptions).pipe(
       tap(_ => this.log(`updated user id=${user._id}`)),
       catchError(this.handleError<any>('updateUser'))
