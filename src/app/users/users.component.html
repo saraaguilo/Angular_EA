@@ -19,9 +19,8 @@
   <input id="new-user" #userName />
 
   <!-- (click) passes input value to add() and then clears the input -->
-  <button type="button" class="add-button" (click)="add(userName.value); userName.value=''">
-    Add user
-  </button>
+  <button [routerLink]="['/userAdd']"> Add User </button>
+
 </div>
 
 <ul class="users">

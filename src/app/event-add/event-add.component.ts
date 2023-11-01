@@ -11,7 +11,7 @@ import { EventService } from '../event.service';
   styleUrls: [ './event-add.component.css' ]
 })
 export class EventAddComponent implements OnInit {
-  eventAdd: Event | undefined; 
+  eventAdd: any = {}; 
 
   constructor(
     private route: ActivatedRoute,
@@ -28,7 +28,10 @@ export class EventAddComponent implements OnInit {
   }
 
   save(): void {
-    
+
+    this.eventAdd.coordinates = this.eventAdd.coordinates.split(',').map(Number);
+    this.eventAdd.date = new Date(this.eventAdd.date);
+    //añadir al eventAdd el idUser despues de haberte registrado
       this.eventService.addEvent(this.eventAdd)
         .subscribe(() => this.goBack());
     

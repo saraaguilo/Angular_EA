@@ -1,0 +1,20 @@
+<h2>ADD A USER</h2>
+  
+<div>
+      <label for="user-name">Name: </label>
+      <input id="user-name" [(ngModel)]="userAdd.userName" placeholder="Username"/>
+    </div>
+    <div>
+        <label for="user-email">Email: </label>
+        <input id="user-email" [(ngModel)]="userAdd.email" placeholder="Email"/>
+    </div>
+    <div>
+        <label for="user-birthDate">BirthDate: </label>
+        <input id="user-birthDate" [(ngModel)]="userAdd.birthDate" placeholder="YYYY-MM-DD"/>
+    </div>
+    <div>
+        <label for="user-password">Password: </label>
+        <input id="user-password" [(ngModel)]="userAdd.password" placeholder="Password"/>
+      </div>
+    <button type="button" (click)="goBack()">go back</button>
+    <button type="button" (click)="save()">save</button>
