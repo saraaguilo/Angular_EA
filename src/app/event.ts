@@ -13,4 +13,5 @@ export interface Event {
     idChat: string;
     idComments: string[];
     _id: string;
+    //añadir createdAt y updatedAt
 }

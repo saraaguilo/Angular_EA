@@ -36,20 +36,9 @@ export class EventDetailComponent implements OnInit {
 
   save(): void {
     if (this.event) {
-      const Event = {
-        coordinates: this.event.coordinates,
-        eventName: this.event.eventName,
-        idCategory: this.event.idCategory,
-        date: this.event.date,
-        idUser: this.event.idUser,
-        description: this.event.description,
-        assistants: this.event.assistants,
-        link: this.event.link,
-        photo: this.event.photo,
-        idChat: this.event.idChat,
-        idComments: this.event.idComments
-      }
-      this.eventService.updateEvent(Event)
+    //deconstrucció
+      let{_id, createdAt, updatedAt, ...savedEvent} = this.event;
+      this.eventService.updateEvent(this.event._id, savedEvent)
         .subscribe(() => this.goBack());
     }
   }

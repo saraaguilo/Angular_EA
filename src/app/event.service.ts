@@ -73,12 +73,16 @@ private handleError<T>(operation = 'operation', result?: T) {
   }
 
   /** PUT: update the hero on the server */
-  updateEvent(event: any): Observable<any> { //any canviat
-    const url = `${this.eventsUrl}/${event._id}`;
-    return this.http.put(url, event, this.httpOptions).pipe(
-      tap(_ => this.log(`updated event id=${event._id}`)),
+  updateEvent(id: string, event: any): Observable<any> { //any canviat
+    console.log(id);
+    const url = `${this.eventsUrl}/${id}`;
+    
+    const resp = this.http.put(url, event, this.httpOptions).pipe(
+      tap(_ => this.log(`updated event id=${id}`)),
       catchError(this.handleError<any>('updateEvent'))
     );
+    return resp;
+
   }
 
   /** POST: add a new event to the server */
