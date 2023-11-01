@@ -74,12 +74,16 @@ private handleError<T>(operation = 'operation', result?: T) {
   }
 
   /** PUT: update the hero on the server */
-  updateUser(user: User): Observable<any> {
+  updateUser(id: string, user: any): Observable<any> {
+    console.log(id);
+    const url = `${this.usersUrl}/${id}`;
     
-    return this.http.put(this.usersUrl, user, this.httpOptions).pipe(
-      tap(_ => this.log(`updated user id=${user._id}`)),
+    const resp = this.http.put(url, user, this.httpOptions).pipe(
+      tap(_ => this.log(`updated user id=${id}`)),
       catchError(this.handleError<any>('updateUser'))
     );
+    return resp;
+
   }
 
   /** POST: add a new user to the server */

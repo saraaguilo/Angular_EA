@@ -37,9 +37,11 @@ export class UserDetailComponent implements OnInit {
 
   save(): void {
     if (this.user) {
-      this.userService.updateUser(this.user)
-        .subscribe(() => this.goBack());
-    }
+      //deconstrucció
+        let{_id, createdAt, updatedAt, ...savedUser} = this.user;
+        this.userService.updateUser(this.user._id, savedUser)
+          .subscribe(() => this.goBack());
+      }
   }
   
 }

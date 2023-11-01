@@ -17,6 +17,7 @@ import { EventsComponent } from './events/events.component';
 import { UsersComponent } from './users/users.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
+import { EventAddComponent } from './event-add/event-add.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     UserSearchComponent,
     EventsComponent,
     UsersComponent,
-    NavbarComponent
+    NavbarComponent,
+    EventAddComponent
 ],
   imports: [
     BrowserModule,

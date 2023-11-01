@@ -1,0 +1,26 @@
+
+<div *ngIf="eventAdd">
+  
+    <h2>ADD AN EVENT</h2>
+  
+<div>
+      <label for="event-name">Name: </label>
+      <input id="event-name" [(ngModel)]="eventAdd.eventName" placeholder="Event name"/>
+    </div>
+    <div>
+        <label for="event-description">Description: </label>
+        <input id="event-description" [(ngModel)]="eventAdd.description" placeholder="Event description"/>
+    </div>
+    <div>
+        <label for="event-coordinates">Coordinates: </label>
+        <input id="event-coordinates" [(ngModel)]="eventAdd.coordinates" placeholder="Event coordinates"/>
+    </div>
+    <div>
+        <label for="event-date">Date: </label>
+        <input id="event-date" [(ngModel)]="eventAdd.date" placeholder="Event date"/>
+      </div>
+    <button type="button" (click)="goBack()">go back</button>
+    <button type="button" (click)="save()">save</button>
+  
+    
+  </div>

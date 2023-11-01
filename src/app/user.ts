@@ -10,4 +10,6 @@ export interface User {
     createdEventsId: string[];
     joinedEventsId: string[];
     idCategories: string[];
+    createdAt?: string;
+    updatedAt?: string;
 }
