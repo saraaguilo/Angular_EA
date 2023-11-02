@@ -1,15 +1,21 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-navigation',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavigationComponent implements OnInit {
 
-  constructor() { }
+  
 
-  ngOnInit(): void {
-  }
-
+    public active : boolean = false 
+  
+    constructor() { }
+    ngOnInit(): void {}
+  
+    setActive() : void {
+      this.active = !this.active
+    }
+  
 }

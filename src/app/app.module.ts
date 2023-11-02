@@ -16,7 +16,7 @@ import { UserSearchComponent } from './user-search/user-search.component';
 import { EventsComponent } from './events/events.component';
 import { UsersComponent } from './users/users.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavigationComponent } from './navbar/navbar.component';
 import { EventAddComponent } from './event-add/event-add.component';
 import { UserAddComponent } from './user-add/user-add.component';
 
@@ -31,7 +31,7 @@ import { UserAddComponent } from './user-add/user-add.component';
     UserSearchComponent,
     EventsComponent,
     UsersComponent,
-    NavbarComponent,
+    NavigationComponent,
     EventAddComponent,
     UserAddComponent
 ],
@@ -50,6 +50,7 @@ import { UserAddComponent } from './user-add/user-add.component';
     //)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, NavigationComponent],
+  
 })
 export class AppModule { }
