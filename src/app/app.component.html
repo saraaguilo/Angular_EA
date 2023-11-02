@@ -7,7 +7,7 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-
+<app-cabecera></app-cabecera>
 
 <style>
   :host {
@@ -35,7 +35,7 @@
   .spacer {
     flex: 1;
   }
-
+/*
   .toolbar {
     position: absolute;
     top: 0;
@@ -67,7 +67,7 @@
   .toolbar #youtube-logo:hover {
     opacity: 0.8;
   }
-
+*/
   .content {
     display: flex;
     margin: 82px auto 32px;
@@ -307,11 +307,11 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <img
-    width="40"
+    width="100"
     alt="Angular Logo"
-    src="https://seeklogo.com/images/S/spider-man-logo-0C9E5DCA9D-seeklogo.com.png"
+    src="https://static.vecteezy.com/system/resources/previews/005/099/199/non_2x/circular-trumpet-for-jazz-music-concert-show-logo-design-vector.jpg"
   />
-  <span>Welcome to {{title}}! </span>
+  <!--<span>Welcome to {{title}}! </span>-->
 </div>
 
 <div class="content" role="main">
@@ -323,6 +323,7 @@
 -->
 
 <!-- Muestra los distintos componentes (events, dashboard, event-detail) en el fichero AppComponent-->
+<!--
 <nav>
   <a routerLink="/dashboard"> Dashboard </a>
 </nav>
@@ -330,7 +331,7 @@
   <a routerLink="/events"> Events </a>
   <a routerLink="/users"> Users </a>
 </nav>
-
+-->
 <router-outlet></router-outlet>
 
 

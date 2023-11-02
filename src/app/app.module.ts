@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationComponent } from './navbar/navbar.component';
 import { EventAddComponent } from './event-add/event-add.component';
 import { UserAddComponent } from './user-add/user-add.component';
+import { CabeceraComponent } from './cabecera/cabecera.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { UserAddComponent } from './user-add/user-add.component';
     UsersComponent,
     NavigationComponent,
     EventAddComponent,
-    UserAddComponent
+    UserAddComponent,
+    CabeceraComponent
 ],
   imports: [
     BrowserModule,
@@ -50,7 +52,7 @@ import { UserAddComponent } from './user-add/user-add.component';
     //)
   ],
   providers: [],
-  bootstrap: [AppComponent, NavigationComponent],
+  bootstrap: [AppComponent, NavigationComponent, CabeceraComponent],
   
 })
 export class AppModule { }

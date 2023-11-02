@@ -18,7 +18,9 @@ const routes: Routes = [
   { path: 'detailUser/:id', component: UserDetailComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'eventAdd', component: EventAddComponent },
-  { path: 'userAdd', component: UserAddComponent }
+  { path: 'userAdd', component: UserAddComponent },
+  
+
 
 
 ];

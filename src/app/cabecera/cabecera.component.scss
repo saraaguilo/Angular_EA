@@ -1,0 +1,142 @@
+/*
+.header{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(182, 235, 245);
+    padding:1em;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    color:#050505;
+    &__h1{}
+    &__a{}
+    
+    &__button{
+        display: none;
+        cursor: pointer;
+
+        @media screen and (max-width:480px){
+            display: flex;
+        }
+    }
+    &__svg{
+        width:2em;
+        height:2em;
+        fill:white;
+    }
+    &__nav{
+        @media screen and (max-width:480px){
+            width:100%;
+            height:0vh;
+            
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+            pointer-events: none;
+            transition: all .5s ease;
+
+            &--activo{
+                height:50vh;
+                pointer-events: auto;
+            }
+        }
+    }
+    &__ul{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+
+        @media screen and (max-width:480px){
+            flex-direction:column;
+        }
+    }
+    &__li{
+        margin: 0 .9em;
+        @media screen and (max-width:480px){
+            margin: .9em 0;
+        }
+    }
+}
+*/
+.header {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(182, 235, 245);
+    padding: 1em;
+  
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  
+    color: #050505;
+  
+    &__h1 {}
+    &__h2 {}
+  
+    &__a {}
+  
+    &__button {
+      display: none;
+      cursor: pointer;
+  
+      @media screen and (max-width: 480px) {
+        display: flex;
+        order: 1; /* Cambia el orden para que el botón esté en la parte izquierda */
+      }
+    }
+    &__svg {
+      width: 2em;
+      height: 2em;
+      fill: white;
+    }
+    &__nav {
+      @media screen and (max-width: 480px) {
+        width: 100%;
+        height: 0vh;
+  
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+  
+        overflow: hidden;
+        pointer-events: none;
+        transition: all 0.5s ease;
+  
+        &--activo {
+          height: 50vh;
+          pointer-events: auto;
+        }
+      }
+    }
+    &__ul {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start; /* Cambia la alineación de flexbox a la izquierda */
+      align-items: center;
+  
+      @media screen and (max-width: 480px) {
+        flex-direction: column;
+        align-items: flex-start; /* Cambia la alineación vertical a la parte izquierda */
+      }
+    }
+    &__li {
+      margin: 0 0.9em;
+      @media screen and (max-width: 480px) {
+        margin: 0.9em 0;
+      }
+    }
+    &__a {
+      @media screen and (max-width: 480px) {
+        margin: 0.5em 0; /* Ajusta el margen de los elementos de la lista */
+      }
+    }
+  }

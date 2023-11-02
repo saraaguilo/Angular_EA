@@ -1,0 +1,34 @@
+<header class="header">
+
+    <h1 class="header__h1">
+        <a href="#" class="header__a">Search for events!</a>
+    </h1>
+    <h2 class="header__h2">
+        <a class="header__a">BACKOFFICE</a>
+    </h2>
+
+    <button 
+        (click)=" setActive() "
+        class="header__button">
+        <svg class="header__svg" xmlns="http://www.w3.org/2000/svg" width="32" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+    </button>
+
+    <nav 
+        class="header__nav"
+        [ngClass]="{ 'header__nav--activo' : active }">
+
+        <ul class="header__ul">
+            <li class="header__li">
+                <a routerLink="/users" class="header__a">Users</a> <!-- Agrega routerLink a Users -->
+              </li>
+              <li class="header__li">
+                <a routerLink="/events" class="header__a">Events</a> <!-- Agrega routerLink a Events -->
+              </li>
+           
+            
+        </ul>
+    </nav>
+
+</header>
