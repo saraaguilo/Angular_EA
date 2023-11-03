@@ -76,10 +76,15 @@
     justify-content: space-between;
     align-items: center;
   
-    color: #050505;
+    color: #000000;
   
     &__h1 {}
-    &__h2 {}
+
+    &__h2 {
+    color: #4a6b8b;
+    font-family: Open sans-serif; /* Cambia la tipografía a la deseada */
+    font-size: 40px; /* Cambia el tamaño del texto a la deseada */
+    }
   
     &__a {}
   
@@ -132,6 +137,7 @@
       margin: 0 0.9em;
       @media screen and (max-width: 480px) {
         margin: 0.9em 0;
+
       }
     }
     &__a {
@@ -139,4 +145,16 @@
         margin: 0.5em 0; /* Ajusta el margen de los elementos de la lista */
       }
     }
+    .custom-button {
+      background-color: #4a6b8b; /* Cambia el color de fondo a tu preferencia */
+      color: #FFFFFF; /* Cambia el color del texto a tu preferencia */
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+  }
+  
+  .custom-button:hover {
+      background-color: #4a6b8b; /* Cambia el color de fondo al pasar el mouse */
+  }
+  
   }
