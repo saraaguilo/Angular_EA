@@ -16,6 +16,10 @@
         <label for="event-date">Date: </label>
         <input id="event-date" [(ngModel)]="eventAdd.date" placeholder="YYYY-MM-DD"/>
       </div>
+      <div>
+        <label for="event-creator">Cretor id: </label>
+        <input id="event-creator" [(ngModel)]="eventAdd.idUser" placeholder="existing user id"/>
+      </div>
     <button type="button" (click)="goBack()">go back</button>
     <button type="button" (click)="save()">save</button>
   
