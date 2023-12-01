@@ -21,7 +21,7 @@ export class EventService {
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
-  private eventsUrl = 'http://localhost:9090/events';  // URL to web api
+  private eventsUrl = 'http://147.83.7.158:9090/events';  // URL to web api
 
 
   /**

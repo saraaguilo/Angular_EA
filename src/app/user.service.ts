@@ -21,7 +21,7 @@ export class UserService {
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
-  private usersUrl = 'http://localhost:9090/users/';  // URL to web api
+  private usersUrl = 'http://147.83.7.158:9090/users/';  // URL to web api
   
 
 
